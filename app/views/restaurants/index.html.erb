@@ -1,0 +1,14 @@
+<h1><strong>Restaurants</strong></h1>
+<ul>
+↩️ <strong><%= link_to "return", restaurants_path %> &nbsp;
+✳️ <%= link_to "ajouter", new_restaurant_path %> &nbsp;
+</ul></strong>
+
+<% @restaurants.each do |r|%>
+<h4><strong><%= link_to r.name, r %></strong></h2>
+<ul>☎️ <%=r.phone_number%></ul>
+<ul>🗺 <%=r.address%></ul>
+<ul>📍 <%=r.category%></ul>
+
+<br>
+<% end %>

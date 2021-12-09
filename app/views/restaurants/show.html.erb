@@ -1,0 +1,16 @@
+<h1><strong><%= @restaurant.name %> 🍟</strong></h1>
+<br>
+<ul>☎️ <%=@restaurant.phone_number%></ul>
+<ul>🗺 <%=@restaurant.address%></ul>
+<ul>📍 <%=@restaurant.category%></ul>
+<ul>
+↩️ <strong><%= link_to "return", restaurants_path %> &nbsp;
+✳️ <%= link_to "ajouter", new_restaurant_path %> &nbsp;
+</ul></strong>
+
+
+ <%= simple_form_for ([@restaurant, @review]) do |f|%>
+  <%= f.input :content %>
+    <%= f.input :address %>
+    <%= f.submit %>
+ <% end%>
